@@ -1,0 +1,12 @@
+<%= form_for @wakesurfer do |wakesurfer| %>
+
+	<%= wakesurfer.label :url, "Enter URL:" %>
+	<%= wakesurfer.text_field :url, :size => 75 %>
+
+	<%= wakesurfer.label :title, "Enter Title:" %>
+	<%= wakesurfer.text_field :title, :size => 75 %>
+
+	<%= wakesurfer.submit %>
+	<%= link_to "Home", wakesurfers_url %>
+
+<% end %>

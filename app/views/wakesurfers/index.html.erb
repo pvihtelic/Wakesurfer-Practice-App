@@ -1,0 +1,19 @@
+<h1>Wakesurfer Collection</h1>
+
+<h3>
+
+<%= link_to "Add a New Wakesurfer", wakesurfer_new_url %>
+
+</h3>
+
+<ul>
+<% @wakesurfers.each do |wakesurfer| %>
+	
+	<li>
+	<%= link_to image_tag(wakesurfer.url, :width=>200), wakesurfer_url(wakesurfer.id) %>
+	<%= link_to "Delete", wakesurfer_url(wakesurfer.id), :method=>"delete" %>
+	<%= link_to "Edit", edit_wakesurfer_url(wakesurfer.id) %>
+	</li>
+
+<% end %>
+</ul>
